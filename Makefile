@@ -25,15 +25,18 @@ OBJS_DIR = objs
 OBJS_PATH = ./$(OBJS_DIR)/
 OBJS = $(addprefix $(OBJS_PATH), $(addsuffix .o, $(FILES)))
 
-all : .c.o objs_mv $(NAME)
+all : .c.o $(NAME)
 
 .c.o : $(SRCS)
 	$(CC) -c $^
 
+$(OBJS_DIR) :
+	mkdir $@
+
 objs_mv : 
 	mv $(OBJS_O) $(OBJS_PATH)
 
-$(NAME) : .c.o objs_mv
+$(NAME) : .c.o $(OBJS_DIR) objs_mv
 	$(AR) $@ $(OBJS)
 
 clean :
