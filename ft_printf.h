@@ -6,7 +6,7 @@
 /*   By: amery <amery@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 19:54:01 by amery             #+#    #+#             */
-/*   Updated: 2022/11/22 21:10:35 by amery            ###   ########.fr       */
+/*   Updated: 2022/11/24 12:37:03 by amery            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int	ft_printf(const char *str, ...);
 int	ft_putchar_fd(char c, int fd);
